@@ -1,3 +1,5 @@
+image: ytborg/ruby2.7:0.0.6
+
 stages:          # List of stages for jobs, and their order of execution
   - build
   - test
