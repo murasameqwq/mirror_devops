@@ -9,10 +9,6 @@ build-job:       # This job runs in the build stage, which runs first.
   stage: build
   script:
     - whoami  # 检查当前用户
-    - ls -ld /usr/lib/jvm  # 检查JVM目录权限
-    - echo "JAVA_HOME is $JAVA_HOME"
-    - ls -l $JAVA_HOME/bin/java  # 确认路径下是否有Java可执行文件
-    - $JAVA_HOME/bin/java -version  # 检查Java版本
     - chmod +x mvnw
     - ./mvnw build
   artifacts:
