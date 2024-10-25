@@ -16,6 +16,7 @@ unit-test-job:   # This job runs in the test stage.
     - chmod +x mvnw
     - ./mvnw test
 
+
 code-quality:
   stage: test
   image: docker:20.10.12
