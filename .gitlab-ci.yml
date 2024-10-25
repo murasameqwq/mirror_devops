@@ -8,9 +8,8 @@ stages:          # List of stages for jobs, and their order of execution
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
   script:
-    - whoami  # 检查当前用户
     - chmod +x mvnw
-    - ./mvnw build
+    - ./mvnw compile
   artifacts:
     untracked: true
 
