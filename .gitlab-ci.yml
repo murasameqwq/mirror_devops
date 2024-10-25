@@ -27,7 +27,7 @@ code-quality:
   variables:
     HTTP_PROXY: "http://127.0.0.1:12334"
     HTTPS_PROXY: "http://127.0.0.1:12334"
-    NO_PROXY: "localhost,127.0.0.1,.nju.edu.cn，tcr-fvoluck9-1303695223.cos.ap-shanghai.myqcloud.com"  # 根据需要修改
+    NO_PROXY: "localhost,127.0.0.1,.nju.edu.cn,.gitlab.cn,tcr-fvoluck9-1303695223.cos.ap-shanghai.myqcloud.com"  # 根据需要修改
     DOCKER_HOST: "localhost:2375"
     DOCKER_DRIVER: overlay2
     DOCKER_CERT_PATH: ""
