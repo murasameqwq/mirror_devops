@@ -7,8 +7,6 @@ stages:          # List of stages for jobs, and their order of execution
 
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
-  variables:
-    JAVA_HOME: "/usr/lib/jvm/java-8-openjdk-amd64" # 设置JAVA_HOME路径
   script:
     - whoami  # 检查当前用户
     - ls -ld /usr/lib/jvm  # 检查JVM目录权限
