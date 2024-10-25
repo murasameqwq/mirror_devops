@@ -25,6 +25,8 @@ code-quality:
     - name: 'docker:20.10.12-dind'
       command: ['--tls=false', '--host=tcp://0.0.0.0:2375']
   variables:
+    HTTP_PROXY: "http://localhost:12334"
+    HTTPS_PROXY: "http://localhost:12334"
     DOCKER_HOST: "localhost:2375"
     DOCKER_DRIVER: overlay2
     DOCKER_CERT_PATH: ""
