@@ -23,12 +23,12 @@ code-quality:
   allow_failure: false
   services:
     - name: 'docker:20.10.12-dind'
-      command: ['--tls=false', '--host=tcp://0.0.0.0:2375']
+      command: ['--tls=false']
   variables:
     HTTP_PROXY: "http://127.0.0.1:12334"
     HTTPS_PROXY: "http://127.0.0.1:12334"
     NO_PROXY: "localhost,127.0.0.1,.nju.edu.cn,.gitlab.cn,tcr-fvoluck9-1303695223.cos.ap-shanghai.myqcloud.com"  # 根据需要修改
-    DOCKER_HOST: "localhost:2375"
+    DOCKER_HOST: "tcp://docker:2375"
     DOCKER_DRIVER: overlay2
     DOCKER_CERT_PATH: ""
     DOCKER_TLS_CERTDIR: ""
