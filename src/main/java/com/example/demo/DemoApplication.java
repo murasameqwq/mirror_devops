@@ -8,14 +8,25 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class DemoApplication {
 
+        String message = "Haven't received a message yet.";
 
-//test
-	@GetMapping("/")
-	public String home() {
-		return "Spring is here!";
-	}
+        @GetMapping("/")
+        String home() {
+                return "Spring is here!";
+        }
 
-	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
-	}
+        @GetMapping("/api/message")
+        String getMsg() {
+                return message;
+        }
+
+        @PostMapping("/api/message")
+        String saveMsg(@RequestBody String body) {
+                message = body;
+                return "OK";
+        }
+
+        public static void main(String[] args) {
+                SpringApplication.run(DemoApplication.class, args);
+        }
 }
