@@ -16,7 +16,11 @@ build-job:       # This job runs in the build stage, which runs first.
   stage: build
   script:
     - chmod +x mvnw
-    - ./mvnw compile
+    - ./mvnw clean package  # 包含 package 命令以生成 JAR 文件
+  artifacts:
+    paths:
+      - target/demo-0.0.1-SNAPSHOT.jar  # 保存 JAR 文件作为工件
+    expire_in: 1 week  # 工件的过期时间，可根据需求调整
 
 unit-test-job:   # This job runs in the test stage.
   stage: test    # It only starts when the job in the build stage completes successfully.
